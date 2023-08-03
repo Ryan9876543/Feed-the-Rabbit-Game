@@ -86,7 +86,7 @@ function setup()
   ellipseMode(RADIUS);
   textSize(50)
 
-  ground = new Ground (200,690,600,20)
+  ground = new Ground (200,canH,600,20)
   rope = new Rope (8,{x:40, y:30})
   rope2 = new Rope (7,{x:370, y:40})
   rope3 = new Rope (4,{x:400, y:225})
@@ -99,7 +99,7 @@ function setup()
   eat.frameDelay = 20
   sad.frameDelay = 20
 
-  bunny = createSprite(250,610,100,100)
+  bunny = createSprite(170,canH - 80,100,100)
   bunny.scale = 0.2
   //bunny.addImage (bunnyImg)
   bunny.addAnimation ("blinking", blink)
@@ -153,7 +153,7 @@ function draw()
   background(51);
   Engine.update(engine);
 
-  image (backgroundImg, width/2, height/2, 500, 700) 
+  image(backgroundImg,0,0,displayWidth+80,displayHeight);
 
   ground.show()
   rope.show()
